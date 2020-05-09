@@ -1,5 +1,5 @@
 [Desktop Entry]
 Type=Application
-Name=agripi
-Exec=sh -c "~/agripi/agripi.py"
+Name=agtf
+Exec=sh -c "~/agtf/agtf.py"
 Terminal=true

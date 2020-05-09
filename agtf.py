@@ -44,7 +44,7 @@ def installBineuse():
     if os.path.exists(PATH + "/bineuse"):
         call("cd ~/bineuse; git reset --hard; git pull")
     else:
-        call("git clone https://github.com/lemairec/bineuse.git ~/bineuse; ~/bineuse/bineuse.py install")
+        call("git clone git@github.com:lemairec/bineuse.git ~/bineuse; ~/bineuse/bineuse.py install")
 
 def nettoyageBineuse():
     call("rm -rf ~/bineuse/build; mkdir ~/bineuse/build")
