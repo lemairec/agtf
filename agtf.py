@@ -30,7 +30,7 @@ def installGPS():
         call("git clone https://github.com/lemairec/agrigpspi.git ~/agrigpspi; ~/agrigpspi/agrigpspi.py install")
 
 def nettoyageGPS():
-    call("rm -rf ~/agrigpspi/build")
+    call("rm -rf ~/agrigpspi/build; mkdir ~/agrigpspi/build")
 
 def update_setup():
    call("cd ~/agtf; git pull;")
@@ -47,7 +47,7 @@ def installBineuse():
         call("git clone https://github.com/lemairec/bineuse.git ~/bineuse; ~/bineuse/bineuse.py install")
 
 def nettoyageBineuse():
-    call("rm -rf ~/bineuse/build")
+    call("rm -rf ~/bineuse/build; mkdir ~/bineuse/build")
 
 window = Tk()
 window.title("AGTF app")
