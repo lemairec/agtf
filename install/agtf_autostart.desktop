@@ -1,6 +1,6 @@
 [Desktop Entry]
 Type=Application
-Name=agripi
+Name=agtf
 Exec=sh -c "~/agtf/agtf.py"
 Terminal=true
 Hidden=false
