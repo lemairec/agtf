@@ -49,19 +49,12 @@ def installBineuse():
 def nettoyageBineuse():
     call("rm -rf ~/bineuse/build; mkdir ~/bineuse/build")
 
-def clickedBineuseNew():
-    call("~/bineuse_new/bineuse.py run")
+def clickedMaster():
+    call("~/bineuse; git checkout master; rm -rf ~/bineuse/build")
 
-def installBineuseNew():
-    print(PATH + "/bineuse_new")
-    if os.path.exists(PATH + "/bineuse_new"):
-        call("cd ~/bineuse_new; git reset --hard; git pull; git checkout new_gui")
-    else:
-        call("git clone git@github.com:lemairec/bineuse.git ~/bineuse_new; cd ~/bineuse_new; git checkout new_gui; ~/bineuse_new/bineuse.py install")
-
-def nettoyageBineuseNew():
-    call("rm -rf ~/bineuse_new/build; mkdir ~/bineuse_new/build")
-
+def clickedNewGui():
+    call("~/bineuse; git checkout new_gui; rm -rf ~/bineuse/build")
+   
 window = Tk()
 window.title("AGTF app")
 window.geometry('800x600')
@@ -86,14 +79,11 @@ btn.grid(column=1, row=1)
 btn = Button(window, text="clean Bineuse", command=nettoyageBineuse, height = 5, width = 20)
 btn.grid(column=1, row=2)
 
-btn = Button(window, text="Bineuse new", command=clickedBineuseNew, height = 5, width = 20)
+btn = Button(window, text="Master", command=clickedMaster, height = 5, width = 20)
 btn.grid(column=2, row=0)
 
-btn = Button(window, text="update Bineuse", command=installBineuseNew, height = 5, width = 20)
+btn = Button(window, text="New Gui", command=clickedNewGui, height = 5, width = 20)
 btn.grid(column=2, row=1)
-
-btn = Button(window, text="clean Bineuse", command=nettoyageBineuseNew, height = 5, width = 20)
-btn.grid(column=2, row=2)
 
 
 
