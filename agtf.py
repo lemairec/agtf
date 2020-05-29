@@ -50,10 +50,10 @@ def nettoyageBineuse():
     call("rm -rf ~/bineuse/build; mkdir ~/bineuse/build")
 
 def clickedMaster():
-    call("~/bineuse; git checkout master; rm -rf ~/bineuse/build")
+    call("cd ~/bineuse; git checkout master; rm -rf ~/bineuse/build")
 
 def clickedNewGui():
-    call("~/bineuse; git checkout new_gui; rm -rf ~/bineuse/build")
+    call("cd ~/bineuse; git checkout new_gui; rm -rf ~/bineuse/build")
    
 window = Tk()
 window.title("AGTF app")
