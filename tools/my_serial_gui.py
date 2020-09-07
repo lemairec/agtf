@@ -1,13 +1,14 @@
 import serial
 try:
     # for Python2
-    from Tkinter import *   ## notice capitalized T in Tkinter 
+    import Tkinter as tk
+   ## notice capitalized T in Tkinter 
 except ImportError:
     # for Python3
-    from tkinter import * 
+    import tkinter as tk
+
     
-import tkinter as tk
-from tkinter import ttk
+#from tkinter import ttk
  
 app = tk.Tk() 
 app.geometry('800x600')
@@ -18,15 +19,15 @@ labelTop.grid(column=0, row=0)
 
 my_serials = []
 
-comboExample = ttk.Combobox(app, 
-                            values=my_serials)
-comboExample.grid(column=0, row=1)
+#comboExample = ttk.Combobox(app, 
+#                            values=my_serials)
+#comboExample.grid(column=0, row=1)
 
 print(comboExample.get())
 
 T = Text(app, height=20, width=80)
-T.pack()
-T.insert(END, "Output")
+#T.pack()
+#T.insert(END, "Output")
 T.grid(column=0, row=2)
 
 ser = serial.Serial(
