@@ -1,6 +1,11 @@
-from serial import Serial
-from tkinter import *
-
+import serial
+try:
+    # for Python2
+    from Tkinter import *   ## notice capitalized T in Tkinter 
+except ImportError:
+    # for Python3
+    from tkinter import * 
+    
 import tkinter as tk
 from tkinter import ttk
  
