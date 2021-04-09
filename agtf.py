@@ -37,7 +37,7 @@ def update_setup():
    exit();
 
 def clickedBineuse():
-    call("~/bineuse/bineuse.py run")
+    call(" mkdir -p ~/bineuse/build; ~/bineuse/bineuse.py run")
 
 def installBineuse():
     print(PATH + "/bineuse")
@@ -50,10 +50,10 @@ def nettoyageBineuse():
     call("rm -rf ~/bineuse/build; mkdir ~/bineuse/build")
 
 def clickedMaster():
-    call("cd ~/bineuse; git checkout master; rm -rf ~/bineuse/build; mkdir -p ~/bineuse/build")
+    call("cd ~/bineuse; git checkout master; rm -rf ~/bineuse/build;")
 
 def clickedNewGui():
-    call("cd ~/bineuse; git checkout new_gui; rm -rf ~/bineuse/build; mkdir -p ~/bineuse/build")
+    call("cd ~/bineuse; git checkout new_gui; rm -rf ~/bineuse/build;")
    
 window = Tk()
 window.title("AGTF app")
